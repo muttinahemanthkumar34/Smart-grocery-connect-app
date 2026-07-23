@@ -108,17 +108,17 @@ jobs:
         with:
           name: Test-Results-Excel-HTML
           path: |
-            Test Results/
-            Vulnerability Test Results/
+            test_results/
+            vulnerability_test_results/
           retention-days: 30
 
       - name: Deploy Reports to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: Test Results/HTML/
+          folder: test_results/HTML/
           branch: gh-pages
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Write GitHub Action Job Summary
         run: |
-          cat "Test Results/Summary/summary.md" >> $GITHUB_STEP_SUMMARY
+          cat "test_results/Summary/summary.md" >> $GITHUB_STEP_SUMMARY
