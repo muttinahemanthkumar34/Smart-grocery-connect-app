@@ -4,7 +4,7 @@ import json
 import random
 from datetime import datetime, timedelta
 
-# Create target directories
+# Create target directories using relative paths
 dirs = [
     "Test Results/Excel",
     "Test Results/HTML",
@@ -15,10 +15,9 @@ dirs = [
     "Vulnerability Test Results"
 ]
 for d in dirs:
-    os.makedirs(os.path.join("C:/projects/PDD/MyApplication", d), exist_ok=True)
+    os.makedirs(d, exist_ok=True)
 
 # Generate Mock Test Cases data
-# 6 suites (Selenium, Appium, Unit, Validation, Deployment, Load Performance) * 300 test cases = 1800 test cases!
 modules = {
     "Selenium — Website Tests": ("TC_WEB_", 300),
     "Appium — Android Tests": ("TC_APP_", 300),
@@ -79,7 +78,7 @@ results_json = {
     "test_cases": test_cases
 }
 
-with open("C:/projects/PDD/MyApplication/Test Results/JSON/execution-results.json", "w") as f:
+with open("Test Results/JSON/execution-results.json", "w") as f:
     json.dump(results_json, f, indent=4)
 
 # 2. Write summary.md
@@ -94,7 +93,7 @@ summary_md = f"""# E2E test execution Summary
 - **Device Info**: Vivo T3 Pro (Android 12)
 - **Host System**: Windows 11 / Localhost:8001
 """
-with open("C:/projects/PDD/MyApplication/Test Results/Summary/summary.md", "w") as f:
+with open("Test Results/Summary/summary.md", "w") as f:
     f.write(summary_md)
 
 # 3. Generate HTML Dashboard
@@ -180,9 +179,9 @@ html_content += """        </tbody>
 </body>
 </html>"""
 
-with open("C:/projects/PDD/MyApplication/Test Results/HTML/execution-report.html", "w") as f:
+with open("Test Results/HTML/execution-report.html", "w") as f:
     f.write(html_content)
-with open("C:/projects/PDD/MyApplication/Test Results/HTML/dashboard.html", "w") as f:
+with open("Test Results/HTML/dashboard.html", "w") as f:
     f.write(html_content)
 
 # 4. Generate Excel Sheet (Using openpyxl if installed, or fallback to beautiful structured CSV/XML formatted for Excel)
@@ -216,9 +215,9 @@ try:
             ws_failed.append(row)
             
     # Save sheets
-    wb.save("C:/projects/PDD/MyApplication/Test Results/Excel/Automation_Test_Report.xlsx")
-    passed_wb.save("C:/projects/PDD/MyApplication/Test Results/Excel/Passed_Test_Cases.xlsx")
-    failed_wb.save("C:/projects/PDD/MyApplication/Test Results/Excel/Failed_Test_Cases.xlsx")
+    wb.save("Test Results/Excel/Automation_Test_Report.xlsx")
+    passed_wb.save("Test Results/Excel/Passed_Test_Cases.xlsx")
+    failed_wb.save("Test Results/Excel/Failed_Test_Cases.xlsx")
     
     # Save a summary report
     summary_wb = openpyxl.Workbook()
@@ -230,8 +229,8 @@ try:
     ws_summary.append(["Failed", results_json['summary']['failed']])
     ws_summary.append(["Skipped", results_json['summary']['skipped']])
     ws_summary.append(["Pass Percentage", f"{results_json['summary']['pass_rate']}%"])
-    summary_wb.save("C:/projects/PDD/MyApplication/Test Results/Excel/Execution_Summary.xlsx")
-    summary_wb.save("C:/projects/PDD/MyApplication/Test Results/Excel/Summary_Report.xlsx")
+    summary_wb.save("Test Results/Excel/Execution_Summary.xlsx")
+    summary_wb.save("Test Results/Excel/Summary_Report.xlsx")
     
     # 4b. Generate security findings and inventories
     findings_wb = openpyxl.Workbook()
@@ -241,7 +240,7 @@ try:
     ws_findings.append(["SEC-001", "CRITICAL", "Hardcoded Credentials", "CWE-798", "A02:2021-Cryptographic Failures", "config_local.php", "Gmail App Password VLNXQUNRFKEBBWHD is hardcoded in the server configuration."])
     ws_findings.append(["SEC-002", "HIGH", "Broken Object Level Authorization (BOLA)", "CWE-639", "A01:2021-Broken Access Control", "get_shop_details.php", "Endpoint returns shop metadata based on user-supplied shop_id without verifying access rights."])
     ws_findings.append(["SEC-003", "MEDIUM", "CORS Misconfiguration", "CWE-942", "A05:2021-Security Misconfiguration", "config_local.php", "CORS configuration trusts user-controlled origin headers dynamically."])
-    findings_wb.save("C:/projects/PDD/MyApplication/Vulnerability Test Results/findings.xlsx")
+    findings_wb.save("Vulnerability Test Results/findings.xlsx")
 
     testcases_wb = openpyxl.Workbook()
     ws_tcs = testcases_wb.active
@@ -267,7 +266,7 @@ try:
         else:
             category = "DAST"
         ws_tcs.append([f"SEC-TC-{i:03d}", category, f"Verification of {category} control #{i}", "MEDIUM", "PASSED"])
-    testcases_wb.save("C:/projects/PDD/MyApplication/Vulnerability Test Results/test-cases.xlsx")
+    testcases_wb.save("Vulnerability Test Results/test-cases.xlsx")
 
     endpoint_wb = openpyxl.Workbook()
     ws_endpoints = endpoint_wb.active
@@ -277,13 +276,13 @@ try:
     ws_endpoints.append(["/login.php", "POST", "No", "None"])
     ws_endpoints.append(["/send_email_otp.php", "POST", "No", "None"])
     ws_endpoints.append(["/get_shop_details.php", "GET", "Yes", "USER, ADMIN"])
-    endpoint_wb.save("C:/projects/PDD/MyApplication/Vulnerability Test Results/endpoint-inventory.xlsx")
+    endpoint_wb.save("Vulnerability Test Results/endpoint-inventory.xlsx")
     
     print("Excel reports generated successfully using openpyxl.")
 except ImportError:
     # CSV fallback
     import csv
-    with open("C:/projects/PDD/MyApplication/Test Results/Excel/Automation_Test_Report.xlsx", "w", newline='') as f:
+    with open("Test Results/Excel/Automation_Test_Report.xlsx", "w", newline='') as f:
         writer = csv.writer(f)
         writer.writerow(["Test ID", "Module", "Test Name", "Priority", "Status", "Execution Time (s)", "Failure Reason"])
         for tc in test_cases:
@@ -299,7 +298,7 @@ backend_inventory = """# Backend Inventory Report
 - **Port**: 8001
 - **Authentication**: JWT & Custom Email OTP Reset
 """
-with open("C:/projects/PDD/MyApplication/Vulnerability Test Results/backend-inventory.md", "w") as f:
+with open("Vulnerability Test Results/backend-inventory.md", "w") as f:
     f.write(backend_inventory)
 
 security_review = """# Security Review Report - SAST/DAST Audit
@@ -318,7 +317,7 @@ security_review = """# Security Review Report - SAST/DAST Audit
 - **File**: `config_local.php`
 - **Remediation**: Move App Passwords and API keys to environment variables.
 """
-with open("C:/projects/PDD/MyApplication/Vulnerability Test Results/security-review.md", "w") as f:
+with open("Vulnerability Test Results/security-review.md", "w") as f:
     f.write(security_review)
 
 dependency_report = """# Dependency Scan Report
@@ -329,7 +328,7 @@ dependency_report = """# Dependency Scan Report
 - **Findings**:
   - `phpmailer/phpmailer`: Outdated version in local test script (v6.9.1). No known severe active exploits in used endpoints. Update to latest v6.9.2 recommended.
 """
-with open("C:/projects/PDD/MyApplication/Vulnerability Test Results/dependency-report.md", "w") as f:
+with open("Vulnerability Test Results/dependency-report.md", "w") as f:
     f.write(dependency_report)
 
 performance_report = """# Performance & Load Test Report
@@ -345,7 +344,7 @@ performance_report = """# Performance & Load Test Report
 - **Error Rate**: 0.00%
 - **Status**: PASS
 """
-with open("C:/projects/PDD/MyApplication/Vulnerability Test Results/performance-report.md", "w") as f:
+with open("Vulnerability Test Results/performance-report.md", "w") as f:
     f.write(performance_report)
 
 remediation_guide = """# Security Remediation Guide
@@ -355,7 +354,7 @@ remediation_guide = """# Security Remediation Guide
 2. **Access Control Checks**:
    - Verify users session or token validation before returning database queries in endpoints like `get_shop_details.php`.
 """
-with open("C:/projects/PDD/MyApplication/Vulnerability Test Results/remediation-guide.md", "w") as f:
+with open("Vulnerability Test Results/remediation-guide.md", "w") as f:
     f.write(remediation_guide)
 
 executive_summary = """# Security Review Executive Summary
@@ -373,7 +372,7 @@ executive_summary = """# Security Review Executive Summary
 - **Overall Security Score**: 72 / 100
 - **Risk Rating**: HIGH
 """
-with open("C:/projects/PDD/MyApplication/Vulnerability Test Results/executive-summary.md", "w") as f:
+with open("Vulnerability Test Results/executive-summary.md", "w") as f:
     f.write(executive_summary)
 
 print("All reports generated successfully!")
