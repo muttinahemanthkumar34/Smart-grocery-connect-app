@@ -9,7 +9,7 @@ public class ApiConfig {
     // Base URL for the PHP backend
     // Use 10.0.2.2 for Android emulator (localhost on host machine)
     // Use actual IP address for physical devices on same network
-    public static final String BASE_URL = "http://10.135.251.20:8001/";
+    public static final String BASE_URL = "http://192.168.1.8:8001/";
     
     // Image Base URL for product images (database stores relative path like 'uploads/products/...')
     public static final String IMAGE_BASE_URL = BASE_URL;

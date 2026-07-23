@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E2E Automation Dashboard</title>
+    <meta charset="utf-8">
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 20px; color: #333; }
+        .header { background: #1e293b; color: white; padding: 20px; border-radius: 8px; margin-bottom: 20px; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-bottom: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); text-align: center; }
+        .card.passed { border-top: 5px solid #10b981; }
+        .card.failed { border-top: 5px solid #ef4444; }
+        .card.skipped { border-top: 5px solid #f59e0b; }
+        .card.total { border-top: 5px solid #3b82f6; }
+        .card-val { font-size: 2.2em; font-weight: bold; margin-top: 10px; }
+        table { width: 100%; border-collapse: collapse; background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        th, td { padding: 12px 15px; text-align: left; border-bottom: 1px solid #e2e8f0; }
+        th { background: #0f172a; color: white; }
+        tr:hover { background: #f8fafc; }
+        .badge { padding: 4px 8px; border-radius: 4px; font-size: 0.85em; font-weight: bold; }
+        .badge.passed { background: #d1fae5; color: #065f46; }
+        .badge.failed { background: #fee2e2; color: #991b1b; }
+        .badge.skipped { background: #fef3c7; color: #92400e; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>GroceryConnect Master E2E Report</h1>
+        <p>Executed at: 2026-07-23 15:58:08 | Target: http://10.135.251.20:8001</p>
+    </div>
+    
+    <div class="stats-grid">
+        <div class="card total">
+            <div>Total Cases</div>
+            <div class="card-val">1800</div>
+        </div>
+        <div class="card passed">
+            <div>Passed</div>
+            <div class="card-val">1731</div>
+        </div>
+        <div class="card failed">
+            <div>Failed</div>
+            <div class="card-val">55</div>
+        </div>
+        <div class="card skipped">
+            <div>Skipped</div>
+            <div class="card-val">14</div>
+        </div>
+    </div>
+
+    <h2>Test Cases Execution details</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Test ID</th>
+                <th>Module</th>
+                <th>Priority</th>
+                <th>Duration (s)</th>
+                <th>Status</th>
+                <th>Failure Reason</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>TC_WEB_001</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.389</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_002</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.206</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_003</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.097</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_004</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.64</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_005</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.697</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_006</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>1.168</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_007</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.354</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_008</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.397</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_009</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.154</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_010</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.778</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_011</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.222</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_012</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.109</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_013</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.735</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_014</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.554</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_015</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.287</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_016</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.314</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_017</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.118</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_018</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.51</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_019</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.722</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_020</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>1.173</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_021</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.722</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_022</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.08</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_023</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>1.079</td>
+                <td><span class="badge failed">FAILED</span></td>
+                <td style="color: #ef4444;">Validation message mismatch in input forms</td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_024</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.787</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_025</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>1.004</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_026</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.513</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_027</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.128</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_028</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.974</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_029</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.687</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_030</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.115</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_031</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.64</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_032</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.54</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_033</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>1.175</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_034</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>1.157</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_035</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.904</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_036</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>1.038</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_037</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.68</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_038</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.865</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_039</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.326</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_040</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.179</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_041</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.412</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_042</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>1.157</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_043</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.228</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_044</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.603</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_045</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.87</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_046</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.663</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_047</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.087</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_048</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.857</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_049</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.806</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_050</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.329</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_051</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.72</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_052</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>1.1</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_053</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>1.037</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_054</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.57</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_055</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.753</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_056</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.66</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_057</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.802</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_058</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.736</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_059</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.345</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_060</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>1.066</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_061</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>1.084</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_062</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.128</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_063</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.198</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_064</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>1.174</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_065</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.486</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_066</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.18</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_067</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>1.181</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_068</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.943</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_069</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.372</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_070</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.466</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_071</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.303</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_072</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>1.062</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_073</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.506</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_074</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.623</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_075</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.649</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_076</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.226</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_077</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.178</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_078</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>1.048</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_079</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.068</td>
+                <td><span class="badge failed">FAILED</span></td>
+                <td style="color: #ef4444;">CORS Policy blocked access control header</td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_080</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.52</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_081</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.793</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_082</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.098</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_083</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>1.056</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_084</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.064</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_085</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.171</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_086</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.989</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_087</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.189</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_088</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.464</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_089</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.632</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_090</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.434</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_091</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.392</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_092</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>1.004</td>
+                <td><span class="badge skipped">SKIPPED</span></td>
+                <td style="color: #ef4444;">Feature flag disabled in configuration</td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_093</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>LOW</td>
+                <td>0.218</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_094</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.073</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_095</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.187</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_096</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>1.025</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_097</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>MEDIUM</td>
+                <td>0.831</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_098</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.154</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_099</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.927</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+            <tr>
+                <td><b>TC_WEB_100</b></td>
+                <td>Selenium — Website Tests</td>
+                <td>HIGH</td>
+                <td>0.729</td>
+                <td><span class="badge passed">PASSED</span></td>
+                <td style="color: #ef4444;"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

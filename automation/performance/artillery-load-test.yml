@@ -1,0 +1,20 @@
+config:
+  target: "http://localhost:8001"
+  phases:
+    - duration: 60
+      arrivalRate: 5
+      rampTo: 20
+      name: Warm up phase
+    - duration: 60
+      arrivalRate: 20
+      name: Sustained load phase (100 users)
+  defaults:
+    headers:
+      User-Agent: "Artillery Load Test Engine"
+scenarios:
+  - flow:
+      - get:
+          url: "/"
+      - think: 1
+      - get:
+          url: "/api_status.php"
