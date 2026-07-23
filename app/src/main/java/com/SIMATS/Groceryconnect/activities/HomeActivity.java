@@ -119,9 +119,10 @@ public class HomeActivity extends AppCompatActivity implements ShopAdapter.OnSho
             startActivity(intent);
         });
         
-        // AI navigation (Coming Soon)
+        // AI navigation
         navAi.setOnClickListener(v -> {
-            Toast.makeText(this, "AI Assistant coming soon!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, AiAssistantActivity.class);
+            startActivity(intent);
         });
         
         // Cart navigation - check if cart has items

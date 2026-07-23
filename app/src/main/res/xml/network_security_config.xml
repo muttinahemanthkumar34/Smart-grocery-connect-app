@@ -16,7 +16,7 @@
     <domain-config cleartextTrafficPermitted="true">
         <domain includeSubdomains="true">10.135.251.20</domain>
         <domain includeSubdomains="true">10.179.4.20</domain>
-        <domain includeSubdomains="true">192.168.1.8</domain>
+        <domain includeSubdomains="true">10.13.54.20</domain>
         <domain includeSubdomains="true">10.228.208.20</domain>
         <domain includeSubdomains="true">10.127.7.36</domain>
         <domain includeSubdomains="true">10.0.2.2</domain>

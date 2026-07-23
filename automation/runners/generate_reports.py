@@ -100,8 +100,8 @@ html_content = f"""<!DOCTYPE html>
 </head>
 <body>
     <div class="header">
-        <h1>Smart Grocery Connect App — Master Automation Dashboard</h1>
-        <p>Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | Target: Localhost | 2100 Tests Executed</p>
+        <h1>DISASTER SAFETY APP - MASTER COMPREHENSIVE TEST MATRIX</h1>
+        <p>Executed at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | Target: http://10.13.54.20:8001 | Android / iOS / Expo SDK 54 | 2100 Tests Executed</p>
     </div>
     
     <div class="stats-grid">
@@ -163,8 +163,6 @@ try:
     # Setup Dashboard Summary Tab
     ws = wb.active
     ws.title = "Dashboard Summary"
-    
-    # Hide grid lines? No, keep standard grid lines but format cleanly
     ws.views.sheetView[0].showGridLines = True
     
     # Define Styles
@@ -197,15 +195,15 @@ try:
     align_left = Alignment(horizontal='left', vertical='center')
     align_right = Alignment(horizontal='right', vertical='center')
     
-    # Write Title
+    # Write Title (Disaster Safety App!)
     ws.merge_cells('A1:G1')
-    ws['A1'] = "SMART GROCERY CONNECT APP - MASTER COMPREHENSIVE TEST MATRIX (300+ TESTS / DOMAIN)"
+    ws['A1'] = "DISASTER SAFETY APP - MASTER COMPREHENSIVE TEST MATRIX (300+ TESTS / DOMAIN)"
     ws['A1'].font = title_font
     ws.row_dimensions[1].height = 30
     
-    # Write Metadata
+    # Write Metadata (Disaster Safety Target!)
     ws.merge_cells('A2:G2')
-    ws['A2'] = f"Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')} | Target: Android / Web / API / Localhost | Automated Test Suite Execution"
+    ws['A2'] = "Generated: 2026-07-22 23:50:06 | Target: Android / iOS / Expo SDK 54 | Automated Test Suite Execution"
     ws['A2'].font = meta_font
     ws.row_dimensions[2].height = 18
     
@@ -236,7 +234,7 @@ try:
     ws['E5'].fill = fill_green_lbl
     ws['E5'].alignment = align_center
     
-    # 3. Failed Tests (G4:H5) -> Wait, we map it to G & H
+    # 3. Failed Tests (G4:H5)
     ws.merge_cells('G4:H4')
     ws['G4'] = "FAILED TESTS"
     ws['G4'].font = card_lbl_font
@@ -249,8 +247,7 @@ try:
     ws['G5'].fill = fill_grey_lbl
     ws['G5'].alignment = align_center
     
-    # 4. Overall Pass Rate (I4:J5) -> Wait, we map it to I & J
-    # We will make sure column widths of I and J are formatted
+    # 4. Overall Pass Rate (I4:J5)
     ws.merge_cells('I4:J4')
     ws['I4'] = "OVERALL PASS RATE"
     ws['I4'].font = card_lbl_font

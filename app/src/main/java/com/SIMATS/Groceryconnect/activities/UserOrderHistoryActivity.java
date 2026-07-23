@@ -126,7 +126,8 @@ public class UserOrderHistoryActivity extends AppCompatActivity implements Order
         });
 
         navAi.setOnClickListener(v -> {
-            Toast.makeText(this, "AI Assistant coming soon!", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, AiAssistantActivity.class);
+            startActivity(intent);
         });
 
         navCartText.setOnClickListener(v -> {
