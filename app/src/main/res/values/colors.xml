@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- Login Theme Colors -->
+    <color name="background_dark">#0D1B2A</color>
+    <color name="background_gradient_end">#1B2838</color>
+    <color name="card_background">#1B2838</color>
+    <color name="card_border">#2D3E50</color>
+    
+    <!-- Accent Colors -->
+    <color name="accent_green">#10B981</color>
+    <color name="accent_green_dark">#2ECC10</color>
+    <color name="accent_orange">#FF8C00</color>
+    <color name="accent_orange_dark">#E07B00</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#8899A6</color>
+    <color name="text_hint">#5C6B7A</color>
+    
+    <!-- Input Field Colors -->
+    <color name="input_background">#0F1C2A</color>
+    <color name="input_border">#2D3E50</color>
+    <color name="input_border_focused">#00D9A5</color>
+</resources>

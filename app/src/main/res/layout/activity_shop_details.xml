@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_back"
+        app:tint="#FFFFFF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shop Details"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/iv_back"
+        app:layout_constraintBottom_toBottomOf="@id/iv_back"
+        app:layout_constraintStart_toEndOf="@id/iv_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="12dp"/>
+
+    <ImageView
+        android:id="@+id/iv_shop_image"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/img_shop_placeholder"
+        app:layout_constraintTop_toBottomOf="@id/iv_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tv_shop_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="The Corner Store"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/iv_shop_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"/>
+
+    <!-- Hours Row -->
+    <LinearLayout
+        android:id="@+id/layout_hours"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/tv_shop_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/view_online_dot"
+        android:layout_marginTop="16dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_clock"
+            app:tint="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/tv_hours"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Open 8:00 AM - 10:00 PM"
+            android:textColor="#CCCCCC"
+            android:textSize="13sp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_online_dot"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:background="@drawable/bg_green_dot"
+        app:layout_constraintTop_toTopOf="@id/layout_hours"
+        app:layout_constraintBottom_toBottomOf="@id/layout_hours"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Address Row -->
+    <LinearLayout
+        android:id="@+id/layout_address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/layout_hours"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_location"
+            app:tint="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/tv_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 123 Market Street, Downtown"
+            android:textColor="#CCCCCC"
+            android:textSize="13sp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Service Chips -->
+    <LinearLayout
+        android:id="@+id/layout_services"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/layout_address"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:id="@+id/tv_delivery_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🚚 Delivery Available"
+            android:textColor="#10B981"
+            android:textSize="12sp"
+            android:background="@drawable/bg_green_chip"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"/>
+
+        <TextView
+            android:id="@+id/tv_pickup_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📦 Pickup Available"
+            android:textColor="#10B981"
+            android:textSize="12sp"
+            android:background="@drawable/bg_green_chip"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="6dp"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+    <!-- Info Box -->
+    <LinearLayout
+        android:id="@+id/layout_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#1C1C1C"
+        android:padding="14dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/layout_services"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp">
+
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/ic_info"
+            app:tint="#CCCCCC"/>
+
+        <TextView
+            android:id="@+id/tv_min_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minimum order amount for delivery is $25."
+            android:textColor="#CCCCCC"
+            android:textSize="13sp"
+            android:layout_marginStart="10dp"/>
+    </LinearLayout>
+
+    <!-- View Feedbacks Button -->
+    <Button
+        android:id="@+id/btn_view_feedbacks"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:text="⭐  View Customer Reviews"
+        android:textStyle="bold"
+        android:textColor="#FFFF00"
+        android:textSize="14sp"
+        android:textAllCaps="false"
+        android:background="@drawable/bg_button_outline_green"
+        app:layout_constraintBottom_toTopOf="@id/btn_view_stock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- View Shop Stock Button -->
+    <Button
+        android:id="@+id/btn_view_stock"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="🏪  View Shop Stock"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        android:backgroundTint="#10B981"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="16dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+GroceryConnect/
+│
+├── app/
+│   ├── manifests/
+│   │   └── AndroidManifest.xml
+│   │
+│   ├── java/com/groceryconnect/
+│   │   ├── activities/
+│   │   │   ├── SplashActivity.java
+│   │   │   ├── LoginActivity.java
+│   │   │   ├── RegisterActivity.java
+│   │   │   ├── HomeActivity.java
+│   │   │   ├── ShopDetailsActivity.java
+│   │   │   ├── ShopStockActivity.java
+│   │   │   ├── CartActivity.java
+│   │   │   ├── OrderStatusActivity.java
+│   │   │   ├── FeedbackActivity.java
+│   │   │   ├── AIRecipeActivity.java
+│   │   │   └── UserProfileActivity.java
+│   │   │
+│   │   ├── adapters/
+│   │   │   ├── ShopAdapter.java
+│   │   │   ├── ProductAdapter.java
+│   │   │   ├── CartAdapter.java
+│   │   │   └── ChatAdapter.java
+│   │   │
+│   │   ├── models/
+│   │   │   ├── User.java
+│   │   │   ├── Shop.java
+│   │   │   ├── Product.java
+│   │   │   ├── CartItem.java
+│   │   │   ├── Order.java
+│   │   │   ├── Feedback.java
+│   │   │   └── AIMessage.java
+│   │   │
+│   │   ├── network/
+│   │   │   ├── ApiClient.java
+│   │   │   ├── ApiEndpoints.java
+│   │   │   └── NetworkUtils.java
+│   │   │
+│   │   ├── utils/
+│   │   │   ├── Constants.java
+│   │   │   ├── SessionManager.java
+│   │   │   └── ValidationUtils.java
+│   │   │
+│   │   └── MainApplication.java
+│   │
+│   ├── res/
+│   │   ├── layout/
+│   │   │   ├── activity_splash.xml
+│   │   │   ├── activity_login.xml
+│   │   │   ├── activity_register.xml
+│   │   │   ├── activity_home.xml
+│   │   │   ├── activity_shop_details.xml
+│   │   │   ├── activity_shop_stock.xml
+│   │   │   ├── activity_cart.xml
+│   │   │   ├── activity_order_status.xml
+│   │   │   ├── activity_feedback.xml
+│   │   │   ├── activity_ai_recipe.xml
+│   │   │   ├── activity_user_profile.xml
+│   │   │
+│   │   │   ├── row_shop.xml
+│   │   │   ├── row_product.xml
+│   │   │   ├── row_cart_item.xml
+│   │   │   └── row_chat_message.xml
+│   │   │
+│   │   ├── drawable/
+│   │   │   ├── ic_ai.xml
+│   │   │   ├── ic_cart.xml
+│   │   │   ├── ic_user.xml
+│   │   │   ├── bg_button.xml
+│   │   │   └── bg_input.xml
+│   │   │
+│   │   ├── values/
+│   │   │   ├── colors.xml
+│   │   │   ├── styles.xml
+│   │   │   ├── strings.xml
+│   │   │   └── dimens.xml
+│   │   │
+│   │   └── menu/
+│   │       └── bottom_nav_menu.xml
+│   │
+│   └── build.gradle
+│
+└── build.gradle

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#121212"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- Back Button -->
+        <TextView
+            android:id="@+id/tvBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Back"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="12dp"/>
+
+        <TextView
+            android:id="@+id/tvStep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="STEP 2 OF 2"
+            android:textColor="#AAAAAA"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="@id/tvBack"
+            app:layout_constraintBottom_toBottomOf="@id/tvBack"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop Details"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/tvBack"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Please enter the details for the shop you will be managing."
+            android:textColor="#BBBBBB"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Shop Image Section -->
+        <LinearLayout
+            android:id="@+id/layoutShopImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <FrameLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp">
+
+                <ImageView
+                    android:id="@+id/ivShopImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_avatar_circle"
+                    android:src="@drawable/ic_shop_placeholder"/>
+
+                <ImageView
+                    android:id="@+id/ivCameraIcon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/bg_button_orange"
+                    android:padding="6dp"
+                    android:src="@drawable/ic_camera"
+                    app:tint="#FFFFFF"/>
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Add Shop Photo (Optional)"
+                android:textColor="#AAAAAA"
+                android:textSize="12sp"
+                android:layout_marginTop="8dp"/>
+        </LinearLayout>
+
+        <!-- Shop Name -->
+        <TextView
+            android:id="@+id/tvShopNameLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop Name"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/layoutShopImage"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/etShopName"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint="Enter the shop's name"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="#2B231C"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvShopNameLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Shop Address -->
+        <TextView
+            android:id="@+id/tvAddressLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop Address"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/etShopName"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint="Enter the shop's address"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="#2B231C"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvAddressLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"/>
+
+        <!-- City -->
+        <TextView
+            android:id="@+id/tvCityLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/etAddress"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvPincodeLabel"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/etCity"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint="City"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="#2B231C"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCityLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/etPincode"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Pincode -->
+        <TextView
+            android:id="@+id/tvPincodeLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pincode"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/etAddress"
+            app:layout_constraintStart_toEndOf="@id/tvCityLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"/>
+
+        <EditText
+            android:id="@+id/etPincode"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint="6-digit"
+            android:inputType="number"
+            android:maxLength="6"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="#2B231C"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvPincodeLabel"
+            app:layout_constraintStart_toEndOf="@id/etCity"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="8dp"/>
+
+        <!-- Shop Phone -->
+        <TextView
+            android:id="@+id/tvShopPhoneLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop Phone"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/etCity"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etShopPhone"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint="10-digit phone number"
+            android:inputType="phone"
+            android:maxLength="10"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="#2B231C"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvShopPhoneLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Shop Category -->
+        <TextView
+            android:id="@+id/tvCategoryLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop Category"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/etShopPhone"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="#2B231C"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvCategoryLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Opening Time / Closing Time Row -->
+        <TextView
+            android:id="@+id/tvOpeningLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Opening Time"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/spinnerCategory"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvClosingLabel"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:id="@+id/etOpeningTime"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint="e.g. 09:00 AM"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="#2B231C"
+            android:padding="16dp"
+            android:focusable="false"
+            android:clickable="true"
+            app:layout_constraintTop_toBottomOf="@id/tvOpeningLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/etClosingTime"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tvClosingLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Closing Time"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/spinnerCategory"
+            app:layout_constraintStart_toEndOf="@id/tvOpeningLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="8dp"/>
+
+        <EditText
+            android:id="@+id/etClosingTime"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint="e.g. 09:00 PM"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="#2B231C"
+            android:padding="16dp"
+            android:focusable="false"
+            android:clickable="true"
+            app:layout_constraintTop_toBottomOf="@id/tvClosingLabel"
+            app:layout_constraintStart_toEndOf="@id/etOpeningTime"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="8dp"/>
+
+        <!-- Delivery Radius -->
+        <TextView
+            android:id="@+id/tvDeliveryRadiusLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delivery Radius (km)"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            app:layout_constraintTop_toBottomOf="@id/etOpeningTime"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etDeliveryRadius"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:hint="e.g. 5"
+            android:inputType="numberDecimal"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:background="#2B231C"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvDeliveryRadiusLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="6dp"/>
+
+        <!-- Delivery Toggle -->
+        <LinearLayout
+            android:id="@+id/layoutDelivery"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#2B231C"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/etDeliveryRadius"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Available"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Allow customers to order delivery"
+                    android:textColor="#AAAAAA"
+                    android:textSize="12sp"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"/>
+        </LinearLayout>
+
+        <!-- Progress Bar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/layoutDelivery"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"/>
+
+        <!-- Create Admin Account Button -->
+        <Button
+            android:id="@+id/btnSignup"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:text="Create Admin Account"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:backgroundTint="#FF9800"
+            app:layout_constraintTop_toBottomOf="@id/layoutDelivery"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="28dp"/>
+
+        <!-- Login Link -->
+        <LinearLayout
+            android:id="@+id/layoutLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/btnSignup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="14dp"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an admin account?"
+                android:textColor="#BBBBBB"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Login"
+                android:textColor="#FF9800"
+                android:textSize="13sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

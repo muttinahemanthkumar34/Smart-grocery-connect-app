@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "49973511946",
+    "project_id": "groceryconnect-f0202",
+    "storage_bucket": "groceryconnect-f0202.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:49973511946:android:515208b89209db8ab75cf3",
+        "android_client_info": {
+          "package_name": "com.SIMATS.Groceryconnect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtlqygIxeZ09XOHFCz7RlcWYaERqKNVPY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#1C1C1C">
+
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Address"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Label (e.g., Home, Work)"
+        android:textColor="#AAAAAA"
+        android:textSize="13sp"/>
+
+    <EditText
+        android:id="@+id/et_label"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter label"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#777777"
+        android:background="@drawable/bg_input_field"
+        android:padding="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"/>
+
+    <!-- Address Line -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Address"
+        android:textColor="#AAAAAA"
+        android:textSize="13sp"/>
+
+    <EditText
+        android:id="@+id/et_address_line"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter street address"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#777777"
+        android:background="@drawable/bg_input_field"
+        android:padding="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="textPostalAddress"/>
+
+    <!-- City -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:textColor="#AAAAAA"
+        android:textSize="13sp"/>
+
+    <EditText
+        android:id="@+id/et_city"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter city"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#777777"
+        android:background="@drawable/bg_input_field"
+        android:padding="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="text"/>
+
+    <!-- Pincode -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pincode"
+        android:textColor="#AAAAAA"
+        android:textSize="13sp"/>
+
+    <EditText
+        android:id="@+id/et_pincode"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter pincode"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#777777"
+        android:background="@drawable/bg_input_field"
+        android:padding="12dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="16dp"
+        android:inputType="number"/>
+
+    <!-- Set as Default Checkbox -->
+    <CheckBox
+        android:id="@+id/cb_default"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Set as default address"
+        android:textColor="#FFFFFF"
+        android:buttonTint="#10B981"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:text="Cancel"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#333333"
+            android:layout_marginEnd="12dp"/>
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:text="Save"
+            android:textColor="#000000"
+            android:backgroundTint="#10B981"/>
+
+    </LinearLayout>
+
+</LinearLayout>

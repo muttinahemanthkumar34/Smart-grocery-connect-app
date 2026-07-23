@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_dark"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_back"
+        android:padding="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        app:tint="@color/white" />
+
+    <!-- Title Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OTP Verification"
+            android:textColor="@color/accent_green"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Enter the 6-digit code sent to\n+91 XXXXXXXXXX"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:lineSpacingExtra="4dp" />
+    </LinearLayout>
+
+    <!-- OTP Input Boxes -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_otp_1"
+            style="@style/OtpBoxStyle"
+            android:layout_width="48dp"
+            android:layout_height="56dp"
+            android:layout_margin="4dp" />
+
+        <EditText
+            android:id="@+id/et_otp_2"
+            style="@style/OtpBoxStyle"
+            android:layout_width="48dp"
+            android:layout_height="56dp"
+            android:layout_margin="4dp" />
+
+        <EditText
+            android:id="@+id/et_otp_3"
+            style="@style/OtpBoxStyle"
+            android:layout_width="48dp"
+            android:layout_height="56dp"
+            android:layout_margin="4dp" />
+
+        <EditText
+            android:id="@+id/et_otp_4"
+            style="@style/OtpBoxStyle"
+            android:layout_width="48dp"
+            android:layout_height="56dp"
+            android:layout_margin="4dp" />
+
+        <EditText
+            android:id="@+id/et_otp_5"
+            style="@style/OtpBoxStyle"
+            android:layout_width="48dp"
+            android:layout_height="56dp"
+            android:layout_margin="4dp" />
+
+        <EditText
+            android:id="@+id/et_otp_6"
+            style="@style/OtpBoxStyle"
+            android:layout_width="48dp"
+            android:layout_height="56dp"
+            android:layout_margin="4dp" />
+    </LinearLayout>
+
+    <!-- Resend Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Didn't receive code? "
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Resend"
+            android:textColor="@color/accent_green"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:padding="4dp" />
+    </LinearLayout>
+
+    <!-- Timer -->
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:text="00:60"
+        android:textColor="@color/text_secondary"
+        android:textSize="14sp" />
+
+    <!-- Verify Button -->
+    <Button
+        android:id="@+id/btn_verify"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_button_green"
+        android:text="Verify OTP"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:textStyle="bold" />
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/accent_green" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Change Number -->
+    <TextView
+        android:id="@+id/tv_change_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="24dp"
+        android:text="Change Phone Number"
+        android:textColor="@color/accent_green"
+        android:textSize="14sp"
+        android:padding="8dp" />
+
+</LinearLayout>

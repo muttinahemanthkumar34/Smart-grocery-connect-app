@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- AI Sparkle/Stars icon - represents AI magic -->
+    <!-- Center large star -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M12,2L13.09,7.26L18,8L13.09,8.74L12,14L10.91,8.74L6,8L10.91,7.26L12,2Z"/>
+    <!-- Top right small star -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M19,10L19.54,12.46L22,13L19.54,13.54L19,16L18.46,13.54L16,13L18.46,12.46L19,10Z"/>
+    <!-- Bottom left small star -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M7,14L7.54,16.46L10,17L7.54,17.54L7,20L6.46,17.54L4,17L6.46,16.46L7,14Z"/>
+</vector>
