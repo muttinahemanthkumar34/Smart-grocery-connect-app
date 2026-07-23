@@ -107,18 +107,16 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: Test-Results-Excel-HTML
-          path: |
-            test_results/
-            vulnerability_test_results/
+          path: automation_reports/
           retention-days: 30
 
       - name: Deploy Reports to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: test_results/HTML/
+          folder: automation_reports/HTML/
           branch: gh-pages
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Write GitHub Action Job Summary
         run: |
-          cat "test_results/Summary/summary.md" >> $GITHUB_STEP_SUMMARY
+          cat "automation_reports/Summary/summary.md" >> $GITHUB_STEP_SUMMARY
